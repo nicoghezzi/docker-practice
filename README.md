@@ -1,6 +1,4 @@
-# Theme: Docker
-
-## Project #1: Deploy Docker Application on a server with Docker Compose
+## Project: Deploy Docker Application on a server with Docker Compose
 
 a. Copy Docker-compose file to remote server
 b. Login to private Docker registry on remote server to fetch our app image.
