@@ -1,9 +1,8 @@
-version: '3'
 services:
-  # my-app:
-    # image: ${docker-registry}/my-app:1.0
-    # ports:
-     # - 3000:3000
+  my-app:
+    image: 64.225.5.67:8083/my-app:1.0
+    ports:
+      - 3000:3000
   mongodb:
     image: mongo
     ports:
@@ -21,7 +20,10 @@ services:
     environment:
      - ME_CONFIG_MONGODB_ADMINUSERNAME=admin
      - ME_CONFIG_MONGODB_ADMINPASSWORD=password
+     - ME_CONFIG_BASICAUTH_USERNAME=user
+     - ME_CONFIG_BASICAUTH_PASSWORD=pass
      - ME_CONFIG_MONGODB_SERVER=mongodb
+     - ME_CONFIG_MONGODB_URL=mongodb://admin:password@mongodb:27017
     depends_on:
      - "mongodb"
 volumes:
